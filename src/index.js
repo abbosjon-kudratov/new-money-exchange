@@ -10,12 +10,19 @@ module.exports = function makeExchange(currency) {
 
     var cur=currency;
     var obj={
-    var H=cur%50;
-     // if (H) {}
-    var Q=cur%20;
-     var D=cur%10;
-     var N=cur%5;
-     var P=cur%1;}
+            H: cur%50,
+             // if (H) {}
+            Q: cur%20,
+            D: cur%10,
+            N: cur%5,
+            P: cur%1,
+            error: "You are rich, my friend! We don't have so much coins for exchange"
+        };
      return obj;
      // return('hello!');
 }
+
+
+
+// 100   H=2
+// 101  H=2
