@@ -18,6 +18,10 @@ module.exports = function makeExchange(currency) {
             P: cur%1,
             error: "You are rich, my friend! We don't have so much coins for exchange"
         };
+
+        if (currency==0) { var obj1={}; return obj1;}
+        if (currency>10000) {var obj1={error: "You are rich, my friend! We don't have so much coins for exchange"};
+                                return obj1;}
      return obj;
      // return('hello!');
 }
